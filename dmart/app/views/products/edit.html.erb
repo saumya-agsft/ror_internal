@@ -1,0 +1,44 @@
+<h1>Editing Product</h1>
+
+<div class="col-md-12">
+
+    <%= form_for @product, url: {action: "update"}, :html=> {class: "form-group"} do |f| %>
+        <div class="row">
+
+            <div class="col-md-3">
+
+                <%= f.label :product_name,class:' control-label' %>
+
+                    <%= f.text_field :product_name ,class:'form-control'%>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-3">
+
+                <%= f.label :quantity,class:' control-label' %>
+                    <%= f.text_field :quanitity ,class:'form-control'%>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-3">
+
+                <%= f.label :price,class:' control-label' %>
+                    <%= f.text_field :price ,class:'form-control'%>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+
+            <div class="col-md-3 ">
+                <%= f.submit "submit",class:'btn btn-primary'%>
+                    <%= link_to 'Back', products_path %>
+
+            </div>
+
+        </div>
+</div>
+
+<% end %>
+    <!-- <%= link_to 'Show', @product %> | -->

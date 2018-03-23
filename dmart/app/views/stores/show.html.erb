@@ -1,0 +1,30 @@
+<h1>Stores#show</h1>
+<p>Find me in app/views/stores/show.html.erb</p>
+<p id="notice">
+    <%= notice %>
+</p>
+
+<%= link_to 'New bill', stores_new_path %>
+    <!-- <h1>Listing Products</h1> -->
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th colspan="3"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% Store.all.each do |product| %>
+                <tr>
+                    <td>
+                        <%= link_to 'Show', stores_show_path %>
+                    </td>
+                    
+                    <!-- <td>
+                        <%= link_to 'delete', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+                    </td> -->
+                </tr>
+                <% end %>
+        </tbody>
+    </table>
